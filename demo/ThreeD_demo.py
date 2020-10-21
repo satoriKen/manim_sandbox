@@ -52,6 +52,7 @@ class Curve_3D_test(SpecialThreeDScene):
         self.set_camera_to_default_position()
         r = 2 # radius
         w = 4
+        axes = ThreeDAxes()
         circle = ParametricFunction(lambda t: r * complex_to_R3(np.exp(1j * w * t)),
                                     t_min=0, t_max=TAU * 1.5, color=RED, stroke_width=8)
         spiral_line = ParametricFunction(lambda t: r * complex_to_R3(np.exp(1j * w * t)) + OUT * t,
